@@ -1,0 +1,18 @@
+<div [ngClass]="'leftPanel'">
+  <h3>Store</h3>
+  <div [ngClass]="'storeBox'" *ngFor="let item of storeItems" >
+    <!-- Looping through storeItems and store it in item-->
+    <div>
+      <div>
+        <h4><a href="#">{{item.name}}</a></h4>
+        <h4 >Price:{{item.price}}</h4>
+        <p>{{item.description}}</p>
+        <!-- string interpolation binding returning item from iteration above-->
+      </div>
+      <div>
+        <button type="button" (click)="addItemInCart(item.id)">Add to Cart</button>
+        <!-- "click event" to add the selected item to cart list by triggering addItemInCart method-->
+      </div>
+    </div>
+  </div>
+</div> 

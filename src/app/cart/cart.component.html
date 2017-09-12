@@ -1,0 +1,20 @@
+
+
+<div [ngClass]="'rightPanel'">
+  <h3>Cart</h3>
+  <ul *ngFor="let item of cartItems">
+		<!-- Looping through cartItems and store it in item-->
+
+		<li>
+		<span> {{item.name}} </span> 
+		<span>- {{item.price}} </span> 
+		<!-- string interpolation binding returning item from iteration above-->
+
+		<span><button type="button" (click)="removeItemFromCart(item.id)">Remove</button></span>
+		<!-- "click event" to remove the item from cart list by triggering removeItemFromCart method-->
+
+	</li>
+  </ul>
+</div> 
+
+
